@@ -10,12 +10,11 @@ import UIKit
 
 class StackOverflowLabel: UILabel {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)!
+        self.font = UIFont(name: "HelveticaNeue-Light", size: 16.0)
+        self.backgroundColor = UIColor.white
+        self.textColor = UIColor.black
     }
-    */
 
 }

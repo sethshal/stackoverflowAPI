@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+class Badge{
+    var goldCount : Int = 0
+    var silverCount : Int = 0
+    var bronzeCount : Int = 0
+}

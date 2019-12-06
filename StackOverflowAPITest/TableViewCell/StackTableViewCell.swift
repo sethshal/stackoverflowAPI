@@ -10,6 +10,15 @@ import UIKit
 
 class StackTableViewCell: UITableViewCell {
 
+    @IBOutlet var userDetails: UITextView!
+    @IBOutlet var userName: UILabel!
+    @IBOutlet var userBadges: UITextView!
+    @IBOutlet var userPicture: UIImageView!
+    
+    @IBOutlet var joinDate: UILabel!
+    @IBOutlet var location: UILabel!
+    
+    @IBOutlet var link: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

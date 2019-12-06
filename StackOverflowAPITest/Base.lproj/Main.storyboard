@@ -1,24 +1,130 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rkH-RZ-mpm">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--StackOverflow Users-->
+        <scene sceneID="r3V-hj-gNA">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController autoresizesArchivedViewToFullSize="NO" title="StackOverflow Users" id="rkH-RZ-mpm" customClass="StackOverflowViewController" customModule="StackOverflowAPITest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7FQ-JS-beD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9WK-tc-RFS">
+                                <rect key="frame" x="0.0" y="83" width="414" height="813"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="stackuserCell" rowHeight="274" id="ypr-er-loT" customClass="StackTableViewCell" customModule="StackOverflowAPITest" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="274"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ypr-er-loT" id="hHV-je-dKi">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="274"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="lHG-Gj-6w5">
+                                                    <rect key="frame" x="10" y="10" width="394" height="254"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="3gZ-4p-TtW">
+                                                            <rect key="frame" x="0.0" y="0.0" width="194.5" height="254"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ehH-Kd-GDw">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="194.5" height="126"/>
+                                                                </imageView>
+                                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Name" translatesAutoresizingMaskIntoConstraints="NO" id="AyV-dR-zEz">
+                                                                    <rect key="frame" x="0.0" y="128" width="150" height="126"/>
+                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="150" id="Vn4-zd-Uoj">
+                                                                            <variation key="heightClass=regular-widthClass=regular" constant="250"/>
+                                                                        </constraint>
+                                                                    </constraints>
+                                                                    <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                </textView>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="g0n-5X-q9C">
+                                                            <rect key="frame" x="199.5" y="0.0" width="194.5" height="254"/>
+                                                            <subviews>
+                                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zAn-wD-EI8">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="198.5"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="150" id="ZKJ-HD-8hs">
+                                                                            <variation key="heightClass=regular-widthClass=regular" constant="250"/>
+                                                                        </constraint>
+                                                                    </constraints>
+                                                                    <attributedString key="attributedText">
+                                                                        <fragment content="Badges">
+                                                                            <attributes>
+                                                                                <color key="NSColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                                <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                            </attributes>
+                                                                        </fragment>
+                                                                    </attributedString>
+                                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                </textView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Since" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahI-Bh-R9B" userLabel="Join Date" customClass="StackOverflowLabel" customModule="StackOverflowAPITest" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="206.5" width="83" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WlY-1S-Mrw" userLabel="Link">
+                                                                    <rect key="frame" x="0.0" y="235" width="37.5" height="19"/>
+                                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                                                                    <color key="textColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="g0n-5X-q9C" firstAttribute="height" secondItem="3gZ-4p-TtW" secondAttribute="height" id="kYv-J8-fcO"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="lHG-Gj-6w5" secondAttribute="trailing" constant="10" id="Ksj-jL-p88"/>
+                                                <constraint firstItem="lHG-Gj-6w5" firstAttribute="leading" secondItem="hHV-je-dKi" secondAttribute="leading" constant="10" id="N9k-7P-ajT"/>
+                                                <constraint firstItem="lHG-Gj-6w5" firstAttribute="top" secondItem="hHV-je-dKi" secondAttribute="top" constant="10" id="e9y-5o-2be"/>
+                                                <constraint firstAttribute="bottom" secondItem="lHG-Gj-6w5" secondAttribute="bottom" constant="10" id="nPr-8I-aMd"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="joinDate" destination="ahI-Bh-R9B" id="Wh8-Lg-mXV"/>
+                                            <outlet property="link" destination="WlY-1S-Mrw" id="Q4e-DS-2Yc"/>
+                                            <outlet property="userBadges" destination="zAn-wD-EI8" id="Sjp-VQ-Q6Q"/>
+                                            <outlet property="userDetails" destination="AyV-dR-zEz" id="o3M-9e-eKw"/>
+                                            <outlet property="userPicture" destination="ehH-Kd-GDw" id="xuT-JZ-3ik"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="9WK-tc-RFS" firstAttribute="bottom" secondItem="Ve8-VS-WUL" secondAttribute="bottom" constant="34" id="0d6-GG-IGr"/>
+                            <constraint firstItem="9WK-tc-RFS" firstAttribute="leading" secondItem="Ve8-VS-WUL" secondAttribute="leading" id="2z0-B5-yDl"/>
+                            <constraint firstItem="Ve8-VS-WUL" firstAttribute="trailing" secondItem="9WK-tc-RFS" secondAttribute="trailing" id="H7B-65-d9P"/>
+                            <constraint firstItem="9WK-tc-RFS" firstAttribute="top" secondItem="Ve8-VS-WUL" secondAttribute="top" constant="39" id="wt2-OE-IoY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ve8-VS-WUL"/>
                     </view>
+                    <connections>
+                        <outlet property="stackOverflowTable" destination="9WK-tc-RFS" id="aj1-tL-3Kb"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2kp-LP-qlP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-655.07246376811599" y="110.49107142857143"/>
         </scene>
     </scenes>
 </document>
